@@ -12,16 +12,12 @@ public class Passenger {
 
     @Id
     @GeneratedValue()
-
     @Column
     private long id;
-
     @Column
     private String name;
-
     @Column
     private String email;
-
     @ManyToMany
     @JsonIgnoreProperties({"passengers"})
     @JoinTable(
