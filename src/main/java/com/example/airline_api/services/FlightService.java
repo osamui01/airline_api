@@ -17,11 +17,15 @@ public class FlightService {
     @Autowired
     PassengerRepository passengerRepository;
 
-    public Flight findFlight(Long flightId) {
-        return flightRepository.findById(flightId).get();
+    public Flight findFlightById(Long id) {
+        return flightRepository.findById(id).get();
     }
 
     public List<Flight> findAllFlights() {
         return flightRepository.findAll();
+    }
+
+    public void saveFlight(Flight flight){
+        flightRepository.save(flight);
     }
 }
